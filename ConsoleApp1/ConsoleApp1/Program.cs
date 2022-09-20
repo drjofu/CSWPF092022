@@ -64,12 +64,26 @@ namespace ConsoleApp1
       Konto[] konten = new Konto[10];
       int[] zahlen = new int[10];
 
-      Hund h = new Hund();
-      h.Bellen();
-      IHund hund = h;
-      hund.Bellen();
-      ISteuerobjekt steuerobjekt = h;
-      steuerobjekt.SteuerAbführen();
+      //Hund h = new Hund();
+      //h.Bellen();
+      //IHund hund = h;
+      //hund.Bellen();
+      //ISteuerobjekt steuerobjekt = h;
+      //steuerobjekt.SteuerAbführen();
+
+      string text = "Hallo Welt\ndas ist schön";
+      text = text.ToUpper();
+      Console.WriteLine(text);
+      var texte = text.Split(' ');
+
+      string pfad = @"c:\beu";  // verbatim string
+      Console.WriteLine(pfad);
+
+      text = @" eins
+                zwei
+                drei";
+
+      Console.WriteLine(text);
 
       Console.ReadLine();
     }
