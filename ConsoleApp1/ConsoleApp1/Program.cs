@@ -7,7 +7,7 @@ namespace ConsoleApp1
     static void Main(string[] args)
     {
 
-      TuWas("abc");
+      TuWas("abcxxx");
       TuWas("abc", "C# lernen", 45);
       TuWas("abc", null, 11);
       //TuWas("geht nicht", null);
