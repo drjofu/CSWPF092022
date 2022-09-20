@@ -67,6 +67,7 @@ namespace ConsoleApp1
       Console.ReadLine();
     }
 
+    static void TuWasGanzAnderes(string fest, string wasDenn = "nix", int wieLange = 20)
     static void TuWasTolles(string fest, string wasDenn = "nix", int wieLange = 20)
     {
       Console.WriteLine("Tut was: {0}, {1} Minuten lang", wasDenn, wieLange);
