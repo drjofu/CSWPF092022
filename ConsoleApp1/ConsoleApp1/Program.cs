@@ -7,7 +7,7 @@ namespace ConsoleApp1
     static void Main(string[] args)
     {
 
-      TuWas("abcxxx");
+      TuWas("abc");
       TuWas("abc", "C# lernen", 45);
       TuWas("abc", null, 11);
       //TuWas("geht nicht", null);
@@ -64,12 +64,42 @@ namespace ConsoleApp1
       Konto[] konten = new Konto[10];
       int[] zahlen = new int[10];
 
+      Hund h = new Hund();
+      h.Bellen();
+      IHund hund = h;
+      hund.Bellen();
+      ISteuerobjekt steuerobjekt = h;
+      steuerobjekt.SteuerAbführen();
+
       Console.ReadLine();
     }
 
     static void TuWas(string fest, string wasDenn = "nix", int wieLange = 20)
     {
       Console.WriteLine("Tut was: {0}, {1} Minuten lang", wasDenn, wieLange);
+    }
+  }
+
+  interface ISteuerobjekt
+  {
+    void SteuerAbführen();
+  }
+
+  interface IHund
+  {
+    void Bellen();
+  }
+
+  class Hund : ISteuerobjekt, IHund
+  {
+    public void Bellen()
+    {
+      throw new NotImplementedException();
+    }
+
+    void ISteuerobjekt.SteuerAbführen()
+    {
+      throw new NotImplementedException();
     }
   }
 

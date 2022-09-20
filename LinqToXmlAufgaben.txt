@@ -1,0 +1,13 @@
+﻿Geben Sie aus:
+
+- alle Mitglieder der OPEC (Hinweis: Attribut "memberships", string.Split(...))
+
+- alle Länder, die gleich viele oder mehr Nachbarstaaten haben als Deutschland
+
+- alle Länder mit mehr als 20 Millionen Einwohnern
+
+- alle Millionenstädte der Welt (Hinweis: Descendants statt Elements)
+
+- den höchsten Berg Deutschlands (Hinweis: string.Split(...))
+
+- alle Länder, bei denen die Religion "Protestant" mehr als 10% Anteil hat
