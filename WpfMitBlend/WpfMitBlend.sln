@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Blend for Visual Studio Version 17
+VisualStudioVersion = 17.3.32811.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfMitBlend", "WpfMitBlend\WpfMitBlend.csproj", "{B9058713-9A0F-460B-8317-7D528F218A1E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B9058713-9A0F-460B-8317-7D528F218A1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9058713-9A0F-460B-8317-7D528F218A1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9058713-9A0F-460B-8317-7D528F218A1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9058713-9A0F-460B-8317-7D528F218A1E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A191E70F-7018-4007-AB49-E8CE4ED08A9E}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,15 @@
+﻿<Window x:Class="WpfMitBlend.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="450" Width="800">
+  <Grid Background="{DynamicResource Füllung3}">
+    <Ellipse Height="68" Margin="49,51,597,315" Stroke="Black" Width="154" Fill="{StaticResource Füllung1}"/>
+    <Ellipse Height="37" Margin="268,109,438,288" Stroke="Black" Width="94" Fill="{StaticResource Füllung1}"/>
+    <Ellipse Height="51" Margin="81,153,586,229" Stroke="Black" Width="132"  Fill="{StaticResource Füllung3}"/>
+    <Ellipse Margin="248,179,460,146" Stroke="Black" Width="93"  Fill="{StaticResource Füllung2}"/>
+    <Ellipse Height="61" Margin="279,34,316,339" Stroke="Black" Fill="{StaticResource Füllung2}"/>
+    <Ellipse Margin="400,140,281,157" Stroke="Black" Width="119"  Fill="{StaticResource Füllung3}"/>
+    <Ellipse Height="49" Margin="82,217,576,168" Stroke="Black" Width="143"  Fill="{StaticResource Füllung3}"/>
+
+  </Grid>
+</Window>

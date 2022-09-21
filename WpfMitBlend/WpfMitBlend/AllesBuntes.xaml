@@ -1,0 +1,13 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+ 
+  <Color A="255" R="100"  G="44" B="255" x:Key="Farbe1"/>
+  <SolidColorBrush Color="{StaticResource Farbe1}" x:Key="Füllung1"/>
+  <Color A="255" R="222"  G="11" B="66" x:Key="Farbe2"/>
+  <SolidColorBrush Color="{StaticResource Farbe2}" x:Key="Füllung2"/>
+  <LinearGradientBrush x:Key="Füllung3">
+    <GradientStop Offset="0" Color="{StaticResource Farbe1}"/>
+    <GradientStop Offset="1" Color="{StaticResource Farbe2}"/>
+  </LinearGradientBrush>
+
+</ResourceDictionary>
