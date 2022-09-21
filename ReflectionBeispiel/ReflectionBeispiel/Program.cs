@@ -16,14 +16,40 @@ namespace ReflectionBeispiel
 
   }
 
+  [Flags]
+  enum Zubehör 
+  {
+    Bremsscheibe = 1,
+    Auspufftopf = 2,
+    Wurstblinker = 4,
+    Scheibenwischer = 8,
+    Hupe = 16
+  }
+
   class Program
   {
     static void Main(string[] args)
     {
       object obj = new Beispielklasse();
       Analysieren(obj);
-
+      Zubehörausgabe();
+      DynamicBeispiel(obj);
       Console.ReadLine();
+    }
+
+    private static void DynamicBeispiel(object obj)
+    {
+      Console.WriteLine("*** Dynamic ***");
+      dynamic d = obj;
+      Console.WriteLine(d.Info);
+      //Console.WriteLine(d.GibtEsNicht);
+    }
+
+    private static void Zubehörausgabe()
+    {
+      Console.WriteLine("*** Zubehör ***");
+      var zubehör = Zubehör.Auspufftopf | Zubehör.Wurstblinker;
+      Console.WriteLine(zubehör);
     }
 
     private static void Analysieren(object obj)

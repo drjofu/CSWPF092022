@@ -8,6 +8,8 @@ namespace LinqToXmlBeispiel
 {
   class Country
   {
+    public int Id { get; set; }
+
     public string CarCode { get; set; }
     public double Area { get; set; }
     public string Name { get; set; }

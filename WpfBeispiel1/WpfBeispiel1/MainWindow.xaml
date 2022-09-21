@@ -1,0 +1,32 @@
+﻿<Window x:Class="WpfBeispiel1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        FontSize="30"
+        Title="MainWindow" Height="450" Width="800">
+  <Canvas>
+    <!--<Canvas.Effect>
+      <BlurEffect Radius="10"/>
+    </Canvas.Effect>-->
+    <Button FontSize="20" Content="Hallo Welt" Canvas.Top="100" Canvas.Left="50"/>
+    <Button Content="Hallo" Canvas.Top="10" Canvas.Left="50"/>
+
+
+    <Button Canvas.Top="200" Canvas.Left="50" Click="ButtonClick">
+      <Button.LayoutTransform>
+        <TransformGroup>
+          <ScaleTransform ScaleX="0.5"/>
+          <RotateTransform Angle="30"/>
+        </TransformGroup>
+      </Button.LayoutTransform>
+      <StackPanel Orientation="Horizontal">
+        <Ellipse Margin="5" Width="100" Height="100" Fill="Yellow"/>
+        <TextBlock VerticalAlignment="Center" Text="Bitte drücken"/>
+        <Ellipse Margin="5" Width="100" Height="100" >
+          <Ellipse.Fill>
+            <ImageBrush ImageSource="/koala.jpg"/>
+          </Ellipse.Fill>
+        </Ellipse>
+      </StackPanel>
+    </Button>
+  </Canvas>
+</Window>
