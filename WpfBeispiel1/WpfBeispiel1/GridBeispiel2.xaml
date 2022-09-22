@@ -6,7 +6,21 @@
         xmlns:local="clr-namespace:WpfBeispiel1"
         mc:Ignorable="d"
         Title="GridBeispiel2" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="49*"/>
+      <RowDefinition Height="100*"/>
+      <RowDefinition Height="63*"/>
+      <RowDefinition Height="222*"/>
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="4*"/>
+      <ColumnDefinition Width="386"/>
+      <ColumnDefinition Width="5*"/>
+    </Grid.ColumnDefinitions>
+    <Button Grid.Column="1" Content="Button" Grid.RowSpan="3"  />
+    <Button Content="Button"  />
+    <Button Grid.Column="2" Content="Button" />
+
+  </Grid>
 </Window>

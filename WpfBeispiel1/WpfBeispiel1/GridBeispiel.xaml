@@ -7,8 +7,21 @@
         mc:Ignorable="d" FontSize="30"
         Title="GridBeispiel" Height="450" Width="800">
   <Grid>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="1*"/>
+      <ColumnDefinition Width="2*"/>
+      <ColumnDefinition Width="Auto"/>
+    </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="40"/>
+      <RowDefinition Height="60"/>
+      <RowDefinition/>
+    </Grid.RowDefinitions>
     <Button Content="A"/>
-    <Button Content="B"/>
-    <Button Content="C"/>
+    <Button Content="B" Grid.Column="1"/>
+    <Button Content="C oder was auch immer" Grid.Column="2"/>
+    <Button Content="D" Grid.Row="1"/>
+    <Button Content="E" Grid.Row="2" Grid.Column="1"/>
+    <Button Content="F" Grid.Column="2" Grid.Row="1"/>
   </Grid>
 </Window>
