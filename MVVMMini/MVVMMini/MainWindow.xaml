@@ -9,14 +9,43 @@
   <Window.DataContext>
     <local:ViewModel/>
   </Window.DataContext>
+  <Window.InputBindings>
+    <KeyBinding Key="Add" Modifiers="Ctrl" Command="{Binding PlusCommand}"/>
+  </Window.InputBindings>
   <Grid>
-    <TextBox HorizontalAlignment="Left" Height="38" Margin="54,51,0,0" Text="{Binding Zahl1}" TextWrapping="Wrap" VerticalAlignment="Top" Width="108"/>
-    <TextBox HorizontalAlignment="Left" Height="38" Margin="230,51,0,0" Text="{Binding Zahl2}" TextWrapping="Wrap" VerticalAlignment="Top" Width="108"/>
+    <TextBox HorizontalAlignment="Left" Height="38" Margin="54,51,0,0" Text="{Binding Zahl1, UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap" VerticalAlignment="Top" Width="108"/>
+    <TextBox HorizontalAlignment="Left" Height="38" Margin="230,51,0,0" Text="{Binding Zahl2, UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap" VerticalAlignment="Top" Width="108"/>
     <TextBlock HorizontalAlignment="Left" Margin="162,125,0,0" Text="{Binding Ergebnis}" TextWrapping="Wrap" VerticalAlignment="Top"/>
     <Button Content="+" HorizontalAlignment="Left" Margin="94,184,0,0" VerticalAlignment="Top" Height="47" Width="44" Command="{Binding PlusCommand}"/>
     <Button Content="-" HorizontalAlignment="Left" Margin="262,184,0,0" VerticalAlignment="Top" Height="47" Width="44" Command="{Binding MinusCommand}"/>
     <Slider HorizontalAlignment="Left" Margin="54,24,0,0" VerticalAlignment="Top" Width="108" Maximum="10000" Value="{Binding Zahl1}"/>
     <Slider HorizontalAlignment="Left" Margin="230,24,0,0" VerticalAlignment="Top" Width="108" Maximum="10000" Value="{Binding Zahl2}"/>
+    <Menu VerticalAlignment="Top">
+      <MenuItem Header="Rechnen">
+        <MenuItem Command="{Binding PlusCommand}" Header="+" ToolTip="Addition"/>
+        <MenuItem Command="{Binding MinusCommand}" Header="-" ToolTip="Subtraktion"/>
+      </MenuItem>
+      <MenuItem Header="Rechnen 2" ItemsSource="{Binding Commands}">
+        <MenuItem.ItemContainerStyle>
+          <Style TargetType="MenuItem">
+            <Setter Property="Header" Value="{Binding DisplayText}"/>
+            <Setter Property="ToolTip" Value="{Binding ToolTipText}" />
+          </Style>
+        </MenuItem.ItemContainerStyle>
+      </MenuItem>
+    </Menu>
+    <ItemsControl ItemsSource="{Binding Commands}" HorizontalAlignment="Left" Margin="366,156,0,0" VerticalAlignment="Top" Height="181" Width="232">
+      <ItemsControl.ItemTemplate>
+        <DataTemplate>
+          <Button Margin="4" Content="{Binding DisplayText}" ToolTip="{Binding ToolTipText}" Command="{Binding}"/>
+        </DataTemplate>
+      </ItemsControl.ItemTemplate>
+      <ItemsControl.ItemsPanel>
+        <ItemsPanelTemplate>
+          <UniformGrid/>
+        </ItemsPanelTemplate>
+      </ItemsControl.ItemsPanel>
+    </ItemsControl>
 
   </Grid>
 </Window>

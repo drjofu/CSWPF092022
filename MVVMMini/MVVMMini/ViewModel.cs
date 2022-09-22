@@ -11,7 +11,7 @@ namespace MVVMMini
   public class ViewModel : INotifyPropertyChanged
   {
     public event PropertyChangedEventHandler PropertyChanged;
-    protected void OnPropertyChanged([CallerMemberName]string propertyName = null)
+    protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
     {
       PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
@@ -43,10 +43,19 @@ namespace MVVMMini
     public ActionCommand PlusCommand { get; set; }
     public ActionCommand MinusCommand { get; set; }
 
+    public List<ActionCommand> Commands { get; set; }
+
     public ViewModel()
     {
-      PlusCommand = new ActionCommand(Plus);
-      MinusCommand = new ActionCommand(Minus);
+      PlusCommand = new ActionCommand(Plus) { DisplayText = "+", ToolTipText = "Addition" };
+      MinusCommand = new ActionCommand(Minus) { DisplayText = "-", ToolTipText = "Subtraktion" };
+
+      Commands = new List<ActionCommand>
+      {
+        PlusCommand,
+        MinusCommand,
+        new ActionCommand(()=>Ergebnis=Zahl1 * Zahl2) {DisplayText="*", ToolTipText="Plutimikation"}
+      };
     }
 
 
